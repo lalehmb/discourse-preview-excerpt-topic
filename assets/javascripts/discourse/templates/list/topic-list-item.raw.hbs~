@@ -1,0 +1,14 @@
+<td class='main-link clearfix' colspan="{{titleColSpan}}">
+  {{raw "topic-status" topic=topic}}
+  {{topic-link topic}}
+  {{#if controller.showTopicPostBadges}}
+    {{raw "topic-post-badges" unread=topic.unread newPosts=topic.displayNewPosts unseen=topic.unseen url=topic.lastUnreadUrl}}
+  {{/if}}
+
+    {{raw "list/topic-excerpt" topic=topic}}  
+
+ <div class='creator'>
+   {{plugin-outlet "topic-list-tags"}
+   {category-link topic.category}}
+ </div>
+</td>
