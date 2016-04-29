@@ -17,16 +17,18 @@
  <div class='creator'>
    {{plugin-outlet "topic-list-tags"}}
    {{category-link topic.category}}
-   {{#if controller.showPosters}}
-     {{raw "list/posters-column" posters=topic.posters}}
-   {{/if}}
  </div>
- 
-   {{raw "list/posts-count-column" topic=topic}}
+</td>
 
-  {{#if controller.showParticipants}}
-     {{raw "list/posters-column" posters=topic.participants}}
-  {{/if}}
+{{#if controller.showPosters}}
+  {{raw "list/posters-column" posters=topic.posters}}
+{{/if}}
+
+{{raw "list/posts-count-column" topic=topic}}
+
+{{#if controller.showParticipants}}
+  {{raw "list/posters-column" posters=topic.participants}}
+{{/if}}
 
 {{#if controller.showLikes}}
 <td class="num likes">
@@ -49,5 +51,3 @@
 <td class="num views {{topic.viewsHeat}}">{{number topic.views numberKey="views_long"}}</td>
 
 {{raw "list/activity-column" topic=topic class="num" tagName="td"}}
-
-</td>
