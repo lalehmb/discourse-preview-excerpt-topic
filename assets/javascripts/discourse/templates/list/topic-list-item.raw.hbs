@@ -20,7 +20,8 @@
    {{#if controller.showPosters}}
      {{raw "list/posters-column" posters=topic.posters}}
    {{/if}}
-
+ </div>
+ 
    {{raw "list/posts-count-column" topic=topic}}
 
   {{#if controller.showParticipants}}
@@ -49,5 +50,4 @@
 
 {{raw "list/activity-column" topic=topic class="num" tagName="td"}}
 
- </div>
 </td>
